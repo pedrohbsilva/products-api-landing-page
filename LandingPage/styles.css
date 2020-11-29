@@ -220,7 +220,7 @@ button{
   height: 30px;
   letter-spacing: 0px;
   justify-content: center;
-  width: 200px;
+  width: 70%;
  }
 
  .button_add_products{
@@ -331,10 +331,14 @@ button{
     width: 100%;
   }
   .section_style_top_div{
-    padding: 0;
+    padding: 10px;
+  }
+  .section_style_top form{
+    width: 100%;
   }
   .fieldset_style{
     margin: 0;
+
   }
   .grid_products{
     grid-template-columns: 1fr;
@@ -358,13 +362,24 @@ button{
   .grid_items h6{
     width: 100%;
   }
+  .grid_items button{
+    width: 100%;
+  }
+  .section_style_input{
+    width: 100%;
+  }
   .section_style_bottom{
     margin-top: 0;
+  }
+  .section_style_bottom form{
+    width: 100%;
+    padding: 10px;
   }
   .section_style_div p{
     padding: 8px;
   }
   .section_style_bottom_form_type_text{
+    width: 100%;
     flex-direction: column;
   }
   .section_style_bottom_form_type_text div{
@@ -372,6 +387,7 @@ button{
   }
   #section_style_top_form_input_submit{
     margin-bottom: 100px;
+    width: 100%;
   }
   #section_style_bottom_form_input_submit{
     border-radius: 4px;

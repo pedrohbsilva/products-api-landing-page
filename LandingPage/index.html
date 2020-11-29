@@ -4,17 +4,116 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="styles.css">
-  <title>Document</title>
+  <title>Landing Page</title>
 </head>
 <body>
-  <div class="container">
-    <main id="teste" class="grid_products">
+  <header class="header_style">
+      <h6>
+        uma seleção de produtos
+      </h6>
+      <h2>
+        especial pra você
+      </h2>
+      <p>
+        Todos os produtos desta lista foram selecionados a partir da sua navigação. Aproveite!
+      </p>
+      <div id="buttons" class="header_grid_buttons">
+
+      </div>    
+  </header>
+  <section class="section_style_top">
+    <div class="section_style_top_div" id="algorithm">
+      <h3>
+        Ajude o algorítimo a ser mais certeiro
+      </h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque ultricies tellus nec mi porta convallis sollicitudin eu urna. Mauris rhoncus erat sed interdum dignissim. Suspendisse semper pretium consectetur. Praesent bibendum arcu risus, sit amet iaculis ex tempus quis. Cras et erat ut tellus vulputate tincidunt. Aenean lacinia euismod augue vel egestas. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Vestibulum vel urna tortor. Vivamus et arcu non felis tristique eleifend.
+      </p>
+      <p>
+        Morbi eu condimentum urna. Curabitur eu magna eget turpis condimentum ultrices.
+        <br>
+        Suspendisse quis lorem ultricies, pulvinar purus sed, egestas erat. Etiam ultricies a ante vehicula pharetra. Quisque ut neque mattis, consequat velit ut, ultrices orci. Nulla varius elementum erat vel pharetra. Aenean sit amet nisi diam. Morbi viverra, magna ac luctus commodo, odio ante suscipit libero, at mattis augue est vel metus.
+      </p>
+    </div>
+    <form action="">
+      <div class="section_style_top_form_type_text">
+        <label for="name" class="section_style_label">Seu nome:</label><br>
+        <input 
+          type="text" 
+          id="name" 
+          name="name"  
+          class="section_style_input"
+          required
+          minlength="3"
+        ><br>
+        <label for="email" class="section_style_label">E-mail:</label><br>
+        <input 
+          type="email" 
+          id="e-mail" 
+          name="e-mail" 
+          class="section_style_input"
+          required
+        ><br>
+        <label for="cpf" class="section_style_label">CPF:</label><br>
+        <input 
+          type="text" 
+          id="cpf" 
+          name="cpf" 
+          class="section_style_input"
+          required
+          maxlength="14"
+        ><br>
+      </div>
+      <div class="section_style_top_form_type_radio">
+        <div>
+          <input type="radio" id="male" name="male">
+          <label for="male">Masculino</label>
+        </div>
+        <div>
+          <input type="radio" id="female" name="female">
+          <label for="female">Feminino</label>
+        </div>
+      </div>
+     <input id="section_style_top_form_input_submit" type="submit" value="Enviar">
+    </form> 
+  </section>
+    <fieldset class="fieldset_style">
+      <legend style="padding: 10px">Sua seleção especial</legend>
+    </fieldset>
+    <main id="api_products" class="grid_products">
 
     </main>  
-    <div id="teste1">
+    <div id="button_for_add_more_products">
   
     </div>
-  </div>
+    <fieldset class="fieldset_style">
+      <legend style="padding: 10px">Compartilhe a novidade</legend>
+    </fieldset>
+    <section class="section_style_bottom" id="share">
+      <div class="section_style_div">
+        <p>
+          Quer que seus amigos também ganhem a lista personalizada deles? Preencha agora!
+        </p>
+      </div>
+      <form action="">
+        <div class="section_style_bottom_form_type_text">
+          <div>
+            <label for="friendName" class="section_style_label">Nome do seu amigo:</label><br>
+            <input type="text" id="friendName" name="friendName" class="section_style_input"><br>
+          </div>
+          <div>
+            <label for="friendEmail" class="section_style_label">E-mail:</label><br>
+            <input type="text" id="friendEmail" name="friendEmail" class="section_style_input"><br>
+          </div>
+        </div>
+        <input id="section_style_bottom_form_input_submit" type="submit" value="Enviar agora">
+      </form> 
+    </section>
+    <footer class="footer_style">
+      <p>Testando minhas habilidades em HTML, CSS e JS.</p> 
+      <p>Linx Impulse</p>
+      <p>2020</p>
+    </footer>
 </body>
 <script src="script.js"></script>
 </html>

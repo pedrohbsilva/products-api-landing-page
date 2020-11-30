@@ -1,3 +1,10 @@
+/** 
+* initialData.
+* @summary Faz uma requisição inicial, para pegar os primeiros 8 itens
+* Nos itens oldPrice,installments, price, passo a função toLocaleString para converter para a moeda brasileira.
+* @return Retorna vários itens dentro das divs e também um botão para fazer mais requisões.
+*/
+
 const array = []
 
 const initialData = async () => {
@@ -8,7 +15,7 @@ const initialData = async () => {
   `<div class="header_button_more_products">
     <button class="button_add_products" onclick="getData('${allData.nextPage}')">`
     +
-      "Ainda mais produtos aqui!" 
+      "Tem muito mais aqui. Vem ver!" 
     +
    "</button>"+
   "</div>"
@@ -22,16 +29,22 @@ const initialData = async () => {
         `<h6>De: ${item.oldPrice.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</h6>` +
         `<h5>Por: ${item.price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</h5>` +
         `<h6>ou ${item.installments.count}x de ${item.installments.value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</h6>` +
-        `<button>Comprar</button>` +
+        `<button onclick="alert('O produto foi comprado!')">Comprar</button>` +
       "</div>"+
     "</div>"
   )); 
 }
 
+/** 
+* getData(nextPage).
+* @summary Faz uma requisição para cada vez que clica no botão, por conta da const array global
+* nos itens oldPrice,installments, price, passo a função toLocaleString para converter para a moeda brasileira.
+* @return Retorna vários itens dentro das divs e também um botão para fazer mais requisões.
+*/
+
 const getData = async (nextPage) => {
   array.push(nextPage)
   const newData = await fetch(`https://frontend-intern-challenge-api.iurykrieger.now.sh/products?page=${array.length+1}`).then(response => response.json())
-  console.log(newData)
   newData.products.map((item) => (
     document.getElementById("api_products").innerHTML +=
     "<div class='grid_items'>" +
@@ -42,26 +55,10 @@ const getData = async (nextPage) => {
         `<h6>De: ${item.oldPrice.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</h6>` +
         `<h5>Por: ${item.price.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</h5>` +
         `<h6>ou ${item.installments.count}x de ${item.installments.value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</h6>` +
-        `<button>Comprar</button>` +
+        `<button onclick="alert('O produto foi comprado!')">Comprar</button>` +
       "</div>"+
     "</div>"
   )); 
 }
 
-const createButtonsForHeader = () => {
-  const createObjectForButtons = [
-    {text: "Conheça a Linx", redirect: "https://www.linx.com.br/nossa-historia/", send: "_blank"},
-    {text: "Ajude o algoritmo", redirect: "#algorithm", send: ""},
-    {text: "Seus produtos", redirect: "#api_products", send: ""},
-    {text: "Compartilhe", redirect: "#share", send: ""},
-  ]
-  createObjectForButtons.map((item)=>(
-    document.getElementById("buttons").innerHTML +=
-      `<a class="header_style_for_a" href="${item.redirect}" target="${item.send}">`+
-      item.text +
-      `</a>`
-  ))
-} 
-
-createButtonsForHeader()
 initialData()

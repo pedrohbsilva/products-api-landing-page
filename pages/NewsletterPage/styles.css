@@ -1,11 +1,11 @@
 @font-face {
   font-family: "HelveticaNeue-Bold";
-  src: url("./fonts/helveticaneue-bold.ttf");
+  src: url("../../fonts/helveticaneue-bold.ttf");
 }
 
 @font-face {
   font-family: "HelveticaNeue-Regular";
-  src: url("./fonts/helvetica-neue-medium.ttf");
+  src: url("../../fonts/helvetica-neue-medium.ttf");
 }
 
 *, html{
@@ -37,7 +37,7 @@ button{
   align-items: center;
   flex-direction: column;
   background-image: -webkit-linear-gradient(85deg, var(--white) 25%, var(--darkGray) 20%);
-  height: 339px; 
+  height: 249px; 
  }
  
 .header_style h6{
@@ -66,39 +66,14 @@ button{
   align-items: center;
   justify-content: center;
 }
-
-.header_grid_buttons{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  width: 55%;
-  align-items: center;
-  justify-content: center;
-}
-
-.header_style_for_a{
-  align-items: center;
-  background: var(--white) 0% 0% no-repeat padding-box;
-  box-shadow: 0px 1px 6px var(--fairGray);
-  border: 1px solid var(--darkGray);
-  border-radius: 4px;
-  color: var(--mediumGray);
-  display: flex;
-  font: normal normal normal 14px/16px 'HelveticaNeue-Regular';
-  height: 100%;
-  letter-spacing: 0px;
-  justify-content: center;
-  padding: 10px;
-  text-decoration: none;
-  width: 80%;
-}
+  
 .section_style_top{
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr;
   width: 75%;
 }
 .section_style_top_div{
-  padding-right: 120px;
-  width: 100%;
+   width: 100%;
 }
 .section_style_top_div h3{
   color: var(--mediumGray);
@@ -114,67 +89,10 @@ button{
   margin-bottom: 15px;
   text-align: left;
 
-}
-.section_style_label{
-  color: var(--mediumGray);
-  font: normal normal normal 12px/14px 'HelveticaNeue-Regular';
-  letter-spacing: 0px;
-  height: 14px;
-  text-align: left;
-  width: 58px;
-}
-.section_style_input{
-  background: var(--white) 0% 0% no-repeat padding-box;
-  border: 1px solid var(--darkGray);
-  height: 30px;
-  margin-bottom: 20px;
-  padding-left: 8px;
-  width: 340px;
-
-}
-.section_style_top_form_type_radio{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin-bottom: 15px;
-  width: 100%;
-}
-
-.section_style_top_form_type_radio input{
-  background: var(--white) 0% 0% no-repeat padding-box;
-  border: 1px solid var(--darkGray);
-  
-}
-.section_style_top_form_type_radio label{
-  color: var(--mediumGray);
-  font: normal normal normal 12px/14px 'HelveticaNeue-Regular';
-  text-align: left;
-}
-#section_style_top_form_input_submit{
-  background: var(--white) 0% 0% no-repeat padding-box;
-  border: 1px solid var(--darkGray);
-  border-radius: 4px;
-  color: var(--mediumGray);
-  cursor: pointer;
-  font: normal normal normal 16px/16px 'HelveticaNeue-Regular';
-  height: 39px;
-  letter-spacing: 0px;
-  text-align: center;
-  width: 340px;
-}
-
-.fieldset_style{
-  border-bottom-width: 0;
-  border-left-width: 0;
-  border-right-width: 0;
-  color: var(--mediumGray);
-  font: normal normal bold 18px/16px 'HelveticaNeue-Bold';
-  letter-spacing: 0px;
-  margin: 50px 150px 50px 150px;
-  text-align: left;  
-}
+} 
 .grid_products{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 3px;
   width: 80%;   
 }
@@ -221,7 +139,12 @@ button{
   letter-spacing: 0px;
   justify-content: center;
   width: 70%;
+  transition-duration: 0.4s;
  }
+ .grid_items button:hover {
+  background-color: var(--mediumGray);
+  color: var(--white);
+}
 
  .button_add_products{
   background: var(--white) 0% 0% no-repeat padding-box;
@@ -232,53 +155,20 @@ button{
   height: 39px;
   letter-spacing: 0px;
   margin-top: 50px;
-  width: 260px;
- }
+  width: 383px;
+  transition-duration: 0.4s;
+ } 
 
- .section_style_bottom{
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  margin-top: -40px;
-  width: 100%;
- }
- .section_style_bottom div p{
-  color: var(--mediumGray);
-  font: normal normal normal 14px/16px 'HelveticaNeue-Regular';
-  letter-spacing: 0px;
-  text-align: center;
- }
- .section_style_bottom form{
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
- }
- #section_style_bottom_form_input_submit{
-  background: var(--white) 0% 0% no-repeat padding-box;
-  border: 1px solid var(--darkGray);
-  border-radius: 4px;
-  color: var(--mediumGray);
-  cursor: pointer;
-  font: normal normal normal 16px/16px 'HelveticaNeue-Regular';
-  height: 39px;
-  letter-spacing: 0px;  
-  text-align: center;
-  width: 340px;
-}
-.section_style_bottom_form_type_text{
-  display: flex;
-  flex-direction: row;
-}
-.section_style_bottom_form_type_text div{
-  margin: 20px;
+ .button_add_products:hover {
+  background-color: var(--mediumGray);
+  color: var(--white);
 }
 .footer_style{
   align-items: center;
   background-image: -webkit-linear-gradient(274deg, var(--white) 30%, var(--darkGray) 30%);
   display: flex;
   flex-direction: column;
-  height: 293px;
+  height: 243px;
   justify-content: center;
   width: 100%;
 }
@@ -298,13 +188,7 @@ button{
 -----------------------------------------------------------------------
 */
 @media (max-width: 600px) {
-  .header_style{
-    background-image: -webkit-linear-gradient(65deg, var(--white) 38%, var(--darkGray) 20%);
-    display: block;
-    height: 500px;
-    padding: 20px;
-    width: 100%;
-  }
+
   .header_style h6{
     margin-top: 0px;
     text-align: left;
@@ -335,18 +219,8 @@ button{
   }
   .section_style_top form{
     width: 100%;
-  }
-  .fieldset_style{
-    margin: 0;
-
-  }
-  .grid_products{
-    grid-template-columns: 1fr;
-  }
-  .grid_items{
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-  }
+  } 
+ 
   .grid_items  div{
     padding-left: 20px;
   }
@@ -364,35 +238,6 @@ button{
   }
   .grid_items button{
     width: 100%;
-  }
-  .section_style_input{
-    width: 100%;
-  }
-  .section_style_bottom{
-    margin-top: 0;
-  }
-  .section_style_bottom form{
-    width: 100%;
-    padding: 10px;
-  }
-  .section_style_div p{
-    padding: 8px;
-  }
-  .section_style_bottom_form_type_text{
-    width: 100%;
-    flex-direction: column;
-  }
-  .section_style_bottom_form_type_text div{
-    margin: 0;
-  }
-  #section_style_top_form_input_submit{
-    margin-bottom: 100px;
-    width: 100%;
-  }
-  #section_style_bottom_form_input_submit{
-    border-radius: 4px;
-    height: 39px;
-    width: 260px;
   }
   .button_add_products{
     margin-bottom: 100px;

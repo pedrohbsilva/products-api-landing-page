@@ -36,16 +36,17 @@
       </p>
     </div>
     <form action="">
-      <div class="section_style_top_form_type_text">
+      <div>
         <label for="name" class="section_style_label">Seu nome:</label><br>
-        <input 
+        <input
           type="text" 
           id="name" 
           name="name"  
           class="section_style_input"
           required
           minlength="3"
-        ><br>
+        >
+        <div id="form_error_name"></div>
         <label for="email" class="section_style_label">E-mail:</label><br>
         <input 
           type="email" 
@@ -53,7 +54,8 @@
           name="e-mail" 
           class="section_style_input"
           required
-        ><br>
+        >
+        <div id="form_error_email"></div>
         <label for="cpf" class="section_style_label">CPF:</label><br>
         <input 
           type="text" 
@@ -61,20 +63,27 @@
           name="cpf" 
           class="section_style_input"
           required
-          maxlength="14"
-        ><br>
+          maxlength="11"
+        >
+        <div id="form_error_cpf"></div>
       </div>
       <div class="section_style_top_form_type_radio">
         <div>
-          <input type="radio" id="male" name="male">
+          <input type="radio" id="male" name="gender">
           <label for="male">Masculino</label>
         </div>
         <div>
-          <input type="radio" id="female" name="female">
+          <input type="radio" id="female" name="gender">
           <label for="female">Feminino</label>
         </div>
       </div>
-     <input id="section_style_top_form_input_submit" type="submit" value="Enviar">
+      <div id="form_error_gender"></div>
+     <input 
+      id="section_style_top_form_input_submit" 
+      type="submit" 
+      value="Enviar"
+      onclick="validateForm('firstForm')"
+    >
     </form> 
   </section>
     <fieldset class="fieldset_style">
@@ -95,18 +104,37 @@
           Quer que seus amigos também ganhem a lista personalizada deles? Preencha agora!
         </p>
       </div>
-      <form action="">
+      <form  method="post" action="">
         <div class="section_style_bottom_form_type_text">
           <div>
             <label for="friendName" class="section_style_label">Nome do seu amigo:</label><br>
-            <input type="text" id="friendName" name="friendName" class="section_style_input"><br>
+            <input 
+              type="text" 
+              id="friendName" 
+              name="friendName" 
+              class="section_style_input"
+              required
+            >
+            <div id="form_error_friendname"></div>
           </div>
           <div>
             <label for="friendEmail" class="section_style_label">E-mail:</label><br>
-            <input type="text" id="friendEmail" name="friendEmail" class="section_style_input"><br>
+            <input 
+              type="email" 
+              id="friendEmail" 
+              name="friendEmail" 
+              class="section_style_input"
+              required
+            >
+            <div id="form_error_friendemail"></div>
           </div>
         </div>
-        <input id="section_style_bottom_form_input_submit" type="submit" value="Enviar agora">
+        <input 
+          id="section_style_bottom_form_input_submit"  
+          type="submit" 
+          value="Enviar agora!"
+          onclick="validateForm('secondForm')"
+        >
       </form> 
     </section>
     <footer class="footer_style">
@@ -115,5 +143,5 @@
       <p>2020</p>
     </footer>
 </body>
-<script src="script.js"></script>
+<script src="../../js/landingPage.js"></script>
 </html>
